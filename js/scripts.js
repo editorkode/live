@@ -1,3 +1,7 @@
+function include(url){ 
+  document.write('<script src="'+ url + '" type="text/javascript" ></script>'); 
+  return false ;
+}
 include('js/cloudEdit.min.js');
 include('js/console.min.js');
 include('js/jqconsole.min.js');
@@ -50,12 +54,7 @@ include('js/ace/theme-vibrant_ink.js');
 include('js/ace/theme-xcode.js');
 include('http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js');
 include('http://rawgit.com/ai/autoprefixer-rails/master/vendor/autoprefixer.js');
-include('http://rawgit.com/medialize/sass.js');/master/dist/sass.min.js');
+include('http://rawgit.com/medialize/sass.js');
 include('http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js');
 include('http://cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/js/foundation/foundation.min.js');
 include('http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js');
-include('http://cdnjs.cloudflare.com/ajax/libs/less.js');/1.7.0/less.min.js');
-function include(url){ 
-  document.write('<script src="'+ url + '" type="text/javascript" ></script>'); 
-  return false ;
-}
