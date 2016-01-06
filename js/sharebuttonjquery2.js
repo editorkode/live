@@ -31,6 +31,7 @@
       exOptions = $.extend({}, {
         url: document.location.href,
         text: $('title').html(),
+        imgDir: './img',
         buttonSpace: 24,
         countPosition: {t
           top: 32,
@@ -68,7 +69,7 @@
       };
       servicesProp = {
         twitter: {
-          img: 'http://www.jqueryscript.net/demo/jQuery-Plugin-For-Custom-Social-Buttons-with-Share-Counts-POP-SocialButton/img/twitter_2x.png',
+          img: 'CloudEdit1.png',
           alt: 'Twitter Share Button',
           shareUrl: "https://twitter.com/share?url=" + exOptions.url + "&text=" + exOptions.text,
           commentUrl: "https://twitter.com/search/?q=" + exOptions.url,
@@ -79,7 +80,7 @@
           }
         },
         facebook: {
-          img: 'http://www.jqueryscript.net/demo/jQuery-Plugin-For-Custom-Social-Buttons-with-Share-Counts-POP-SocialButton/img/facebook_2x.png',
+          img: 'CloudEdit1.png',
           alt: 'Facebook Share Button',
           shareUrl: "https://www.facebook.com/sharer.php?u=" + exOptions.url + "&t=" + exOptions.text,
           countUrl: "https://graph.facebook.com/" + exOptions.url,
@@ -106,7 +107,7 @@
           }
         },
         hatebu: {
-          img: 'http://www.jqueryscript.net/demo/jQuery-Plugin-For-Custom-Social-Buttons-with-Share-Counts-POP-SocialButton/img/hatena_bookmark_2x.png',
+          img: 'CloudEdit1.png',
           alt: 'Hatena Bookmark Share Button',
           shareUrl: "http://b.hatena.ne.jp/add?mode=confirm&url=" + exOptions.url + "&title=" + exOptions.text + "&mode=confirm",
           commentUrl: "http://b.hatena.ne.jp/entry/" + exOptions.urlOrg,
@@ -116,7 +117,7 @@
           }
         },
         gplus: {
-          img: 'http://www.jqueryscript.net/demo/jQuery-Plugin-For-Custom-Social-Buttons-with-Share-Counts-POP-SocialButton/img/google+1_2x.png',
+          img: 'CloudEdit1.png',
           alt: 'Google Plus Share Button',
           shareUrl: "https://plusone.google.com/share?url=" + exOptions.url,
 
@@ -139,7 +140,7 @@
           }
         },
         pocket: {
-          img: 'http://www.jqueryscript.net/demo/jQuery-Plugin-For-Custom-Social-Buttons-with-Share-Counts-POP-SocialButton/img/pocket_2x.png',
+          img: 'CloudEdit1.png',
           alt: 'Pocket Stock Button',
           shareUrl: "https://getpocket.com/save?url=" + exOptions.url + "&title=" + exOptions.text,
 
@@ -160,7 +161,7 @@
           }
         },
         feedly: {
-          img: 'http://www.jqueryscript.net/demo/jQuery-Plugin-For-Custom-Social-Buttons-with-Share-Counts-POP-SocialButton/img/feedly_2x.png',
+          img: 'CloudEdit1.png',
           alt: 'Feedly Follow Button',
           shareUrl: "https://feedly.com/index.html#subscription%2Ffeed%2F" + exOptions.feedUrl,
 
@@ -174,7 +175,7 @@
           }
         },
         github: {
-          img: 'http://www.jqueryscript.net/demo/jQuery-Plugin-For-Custom-Social-Buttons-with-Share-Counts-POP-SocialButton/img/github_alt_2x.png',
+          img: 'CloudEdit1.png',
           alt: 'GitHub Repository',
           shareUrl: "https://github.com/" + exOptions.githubRepo,
           commentUrl: "https://github.com/" + exOptions.githubRepo + "/stargazers",
