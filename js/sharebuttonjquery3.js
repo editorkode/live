@@ -5,7 +5,7 @@
 *
 * http://github.com/ktty1220/jquery.popn-socialbutton
 *
-* å‚è€ƒã‚µã‚¤ãƒˆ
+* 参考サイト
 *
 * - http://q.hatena.ne.jp/1320898356
 * - http://stackoverflow.com/questions/5699270/how-to-get-share-counts-using-graph-api
@@ -31,9 +31,8 @@
       exOptions = $.extend({}, {
         url: document.location.href,
         text: $('title').html(),
-        imgDir: './img',
         buttonSpace: 24,
-        countPosition: {t
+        countPosition: {
           top: 32,
           right: -12
         },
@@ -69,27 +68,27 @@
       };
       servicesProp = {
         twitter: {
-          img: 'CloudEdit1.png',
+          img: 'http://1.bp.blogspot.com/-kSS3u8RvbR0/Vo03nACBR9I/AAAAAAAAAJ4/fIfHeJcOrGg/s1600/twitter_2x.png',
           alt: 'Twitter Share Button',
-          shareUrl: "https://twitter.com/share?url=" + exOptions.url + "&text=" + exOptions.text,
-          commentUrl: "https://twitter.com/search/?q=" + exOptions.url,
-          countUrl: "http://urls.api.twitter.com/1/urls/count.json?url=" + exOptions.url,
+          shareUrl: "https://twitter.com/share?url=" +encodeURIComponent(document.URL) + "&text=" + exOptions.text,
+          commentUrl: "https://twitter.com/search/?q=" + encodeURIComponent(document.URL),
+          countUrl: "http://urls.api.twitter.com/1/urls/count.json?url=" + encodeURIComponent(document.URL),
           jsonpFunc: function(json, cb) {
             var _ref;
             return cb((_ref = json.count) != null ? _ref : 0);
           }
         },
         facebook: {
-          img: 'CloudEdit1.png',
+          img: 'http://4.bp.blogspot.com/-2CqIJMzl1_c/Vo03lwnmLwI/AAAAAAAAAJc/vrceUd3q36E/s1600/facebook_2x.png',
           alt: 'Facebook Share Button',
-          shareUrl: "https://www.facebook.com/sharer.php?u=" + exOptions.url + "&t=" + exOptions.text,
-          countUrl: "https://graph.facebook.com/" + exOptions.url,
+          shareUrl: "https://www.facebook.com/sharer.php?u=" + encodeURIComponent(document.URL) + "&t=" + exOptions.text,
+          countUrl: "https://graph.facebook.com/" + encodeURIComponent(document.URL),
           jsonpFunc: function(json, cb) {
 
             /*
-            * - Graph APIã§sharesãŒå–å¾—ã§ããªã„å ´åˆã¯FQLã§total_countã‚’å–å¾—ã™ã‚‹
-            * - Graph APIã®likes + FQLã®total_countã§ã„ã„ã­ãƒœã‚¿ãƒ³ã¨åŒã˜ä»¶æ•°ã«ãªã‚‹æ¨¡æ§˜(ã„ãã¤ã‹ã®ã‚±ãƒ¼ã‚¹ã‚’èª¿ã¹ãŸçµæžœ)
-            * - ã»ã¨ã‚“ã©ã®ã‚µã‚¤ãƒˆã§ã¯FQLã®total_countã ã‘ã§ã„ã„ã­ãƒœã‚¿ãƒ³ã¨åŒã˜ä»¶æ•°ã«ãªã‚‹
+            * - Graph APIでsharesが取得できない場合はFQLでtotal_countを取得する
+            * - Graph APIのlikes + FQLのtotal_countでいいねボタンと同じ件数になる模様(いくつかのケースを調べた結果)
+            * - ほとんどのサイトではFQLのtotal_countだけでいいねボタンと同じ件数になる
              */
             var graphLikes, _ref;
             if (json.shares != null) {
@@ -107,24 +106,24 @@
           }
         },
         hatebu: {
-          img: 'CloudEdit1.png',
+          img: 'http://2.bp.blogspot.com/-9qK1kYuhLhY/Vo03mo1fKVI/AAAAAAAAAJs/G2vQpppamDQ/s1600/hatena_bookmark_2x.png',
           alt: 'Hatena Bookmark Share Button',
-          shareUrl: "http://b.hatena.ne.jp/add?mode=confirm&url=" + exOptions.url + "&title=" + exOptions.text + "&mode=confirm",
+          shareUrl: "http://b.hatena.ne.jp/add?mode=confirm&url=" + encodeURIComponent(document.URL) + "&title=" + exOptions.text + "&mode=confirm",
           commentUrl: "http://b.hatena.ne.jp/entry/" + exOptions.urlOrg,
-          countUrl: "http://api.b.st-hatena.com/entry.count?url=" + exOptions.url,
+          countUrl: "http://api.b.st-hatena.com/entry.count?url=" + encodeURIComponent(document.URL),
           jsonpFunc: function(json, cb) {
             return cb(json != null ? json : 0);
           }
         },
         gplus: {
-          img: 'CloudEdit1.png',
+          img: 'http://2.bp.blogspot.com/-1IqjWciWvvI/Vo03mRnS9WI/AAAAAAAAAJk/RoJu7I_yzZI/s1600/google%252B1_2x.png',
           alt: 'Google Plus Share Button',
-          shareUrl: "https://plusone.google.com/share?url=" + exOptions.url,
+          shareUrl: "https://plusone.google.com/share?url=" + encodeURIComponent(document.URL),
 
           /*
-          * - Google+1ãƒœã‚¿ãƒ³ã¯ã‚·ã‚§ã‚¢æ•°ã«é–¢ã™ã‚‹jsonpã‚’æä¾›ã—ã¦ã„ãªã„(jsonã™ã‚‰æä¾›ã—ã¦ã„ãªã„)ã®ã§+1ãƒœã‚¿ãƒ³ã®htmlã‚’å–å¾—ã—ã¦ãã®ä¸­ã‹ã‚‰ä»¶æ•°ã‚’å–å¾—ã™ã‚‹
-          * - ã‚¯ãƒ­ã‚¹ãƒ‰ãƒ¡ã‚¤ãƒ³ã«ã‚ˆã‚‹å–å¾—ã«ãªã‚‹ã®ã§YQLã‚’ä½¿ç”¨ã™ã‚‹
-          * - ãŸã ã—googleã®ã‚µãƒ¼ãƒãƒ¼ã«è¨­ç½®ã—ã¦ã‚ã‚‹robots.txtã¯YQL(ã¨ã„ã†ã‹Yahooã®ãƒ­ãƒœãƒƒãƒˆå…¨èˆ¬ï¼Ÿ)ã®UAã‚’æ‹’å¦ã™ã‚‹ã®ã§Open Data Tableã®data.headerãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’ä½¿ç”¨ã™ã‚‹
+          * - Google+1ボタンはシェア数に関するjsonpを提供していない(jsonすら提供していない)ので+1ボタンのhtmlを取得してその中から件数を取得する
+          * - クロスドメインによる取得になるのでYQLを使用する
+          * - ただしgoogleのサーバーに設置してあるrobots.txtはYQL(というかYahooのロボット全般？)のUAを拒否するのでOpen Data Tableのdata.headerプラグインを使用する
            */
           countUrl: mkYQL("https://plusone.google.com/_/+1/fastbutton?hl=ja&url=" + exOptions.urlOrg),
           jsonpFunc: function(json, cb) {
@@ -140,12 +139,12 @@
           }
         },
         pocket: {
-          img: 'CloudEdit1.png',
+          img: 'http://2.bp.blogspot.com/-OxvsGI6Zns4/Vo03myc95AI/AAAAAAAAAJ0/1b_LTGq4Blo/s1600/pocket_2x.png',
           alt: 'Pocket Stock Button',
-          shareUrl: "https://getpocket.com/save?url=" + exOptions.url + "&title=" + exOptions.text,
+          shareUrl: "https://getpocket.com/save?url=" + encodeURIComponent(document.URL) + "&title=" + exOptions.text,
 
           /*
-          * Google+1ãƒœã‚¿ãƒ³ã¨åŒæ§˜ã«YQLã§ã‚«ã‚¦ãƒ³ãƒˆã‚’å–å¾—ã™ã‚‹
+          * Google+1ボタンと同様にYQLでカウントを取得する
            */
           countUrl: mkYQL("https://widgets.getpocket.com/v1/button?label=pocket&count=vertical&align=left&v=1&url=" + exOptions.urlOrg + "&src=" + exOptions.urlOrg + "&r=" + (Math.random() * 100000000)),
           jsonpFunc: function(json, cb) {
@@ -161,12 +160,12 @@
           }
         },
         feedly: {
-          img: 'CloudEdit1.png',
+          img: 'http://4.bp.blogspot.com/-YxZzD1BDjgs/Vo03lx4f17I/AAAAAAAAAJg/Oq_vlT8Yb-o/s1600/feedly_2x.png',
           alt: 'Feedly Follow Button',
           shareUrl: "https://feedly.com/index.html#subscription%2Ffeed%2F" + exOptions.feedUrl,
 
           /*
-          * Google+1ãƒœã‚¿ãƒ³ã¨åŒæ§˜ã«YQLã§ã‚«ã‚¦ãƒ³ãƒˆã‚’å–å¾—ã™ã‚‹
+          * Google+1ボタンと同様にYQLでカウントを取得する
            */
           countUrl: mkYQL("https://cloud.feedly.com/v3/feeds/feed%2F" + (encodeURIComponent(exOptions.feedUrl)), true),
           jsonpFunc: function(json, cb) {
@@ -175,7 +174,7 @@
           }
         },
         github: {
-          img: 'CloudEdit1.png',
+          img: 'http://1.bp.blogspot.com/-7Va_zJX0hJc/Vo03l7v_RTI/AAAAAAAAAJY/4eyuCz7gEIM/s1600/github_alt_2x.png',
           alt: 'GitHub Repository',
           shareUrl: "https://github.com/" + exOptions.githubRepo,
           commentUrl: "https://github.com/" + exOptions.githubRepo + "/stargazers",
@@ -214,7 +213,7 @@
             height: '100%'
           });
           imgTag = $('<img/>').attr({
-            src: "" + exOptions.imgDir + "/" + prop.img,
+            src: prop.img,
             alt: prop.alt
           }).css({
             border: 'none'
