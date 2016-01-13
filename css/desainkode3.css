@@ -358,7 +358,7 @@
 }
 
 pre code {
-display: block; padding: 10px; font-size:85%;border-left: 5px solid #9A3135;margin-top: 5px;overflow-wrap: break-word; overflow: auto;
+display: block; padding: 10px; font-size:85%;border-left: 5px solid #9A3135;margin-top: 5px;overflow-wrap: break-word; overflow: auto; overflow-x:hidden;
 color: #DCCF8F;
 background: url('http://1.bp.blogspot.com/-JDi29VU66_M/VnuEQ-q8lHI/AAAAAAAAADs/yd605KzkrGg/s1600/desainkode.jpg') repeat scroll left top #181914;}
 pre .comment,
