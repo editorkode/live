@@ -1,0 +1,81 @@
+/* -----------------------------CSS NYA----------------------------- */
+/* Menu Sidebar Kanan Lama*/
+.page-container.sidebar-collapsed .sidebar-menuside #menuside,.page-container.sidebar-collapsed-back .sidebar-menuside{transition:all 1s cubic-bezier(.68,-.55,.27,1.55);background-color:#31333e}.page-container{position:relative;top:0;right:0;bottom:0;margin:0 auto}.page-container.sidebar-collapsed .sidebar-menuside{width:4.5%;transition:all 1s cubic-bezier(.68,-.55,.27,1.55)}.page-container.sidebar-collapsed-back .sidebar-menuside{width:14%;box-shadow:0 0 10px 0 rgba(0,0,0,.5)}.page-container.sidebar-collapsed .logoo{height:175px;box-sizing:border-box;padding:75px 40px;transition-delay:.3s;}.page-container.sidebar-collapsed #logoo{opacity:0;transition:all .2s ease-in-out}.page-container.sidebar-collapsed-back #logoo{opacity:1;transition:all .2s ease-in-out;transition-delay:.3s}.page-container.sidebar-collapsed #menuside span{opacity:0;transition:all 50ms linear}#menuside i{color:#46A3FA}.page-container.sidebar-collapsed-back #menuside span{opacity:1;transition:all .2s linear;transition-delay:.3s}.sidebar-menuside{position:fixed;float:left;width:4.5%;top:0;right:0;bottom:0;color:#aaabae;font-family:"Segoe UI";z-index:1}#menuside li li ul,#menuside li ul{right:100%;visibility:hidden;top:-1px;opacity:0}.sidebar-icon{float:right;border:1px solid #46A3FA;border-radius:3px;color:#46A3FA;transition:all 1s cubic-bezier(.68,-.55,.27,1.55);margin:12px;padding:4px 6px}.sidebar-icon:hover{transform:rotate(360deg);transition:all .3s ease-in-out}#menuside{list-style:none;background-color:#31333e;}#menuside li{position:relative;font-size:12px;border-bottom:1px solid rgba(69,74,84,.7);margin:0;padding:0}#menuside li ul{height:0;position:absolute;background-color:#2b303a;box-shadow:0 0 10px 0 rgba(0,0,0,.5);transition:opacity .1s linear;border-top:1px solid rgba(69,74,84,.7)}#menuside li a{font-style:normal;font-weight:400;position:relative;display:block;color:#aaabae;white-space:nowrap;z-index:2;padding:10px 20px}#menuside li a:hover,#menuside.fa:hover{color:#fff;background-color:#333944;transition:color 250ms ease-in-out,background-color 250ms ease-in-out}#menuside li.active>a,#menuside ul li{background-color:#2b303a}#menuside li.active>a{color:#fff}#menuside ul{list-style-type:none;margin:0;padding:0}#menuside li li ul{transition:opacity .1s linear}#menuside .fa{margin-right:5px}.logoo{height:175px;box-sizing:border-box;padding:75px 40px}#logoo,#menuside span{opacity:0}#menuside li li:hover ul,#menuside li:hover>ul{visibility:visible;opacity:1}#menuside li ul li{width: 120px}.angleright{right:20px;}.angleright2{float:right;margin-right:-8px;margin-top:2px;}
+
+/* Sidebar Logo kecil */
+#sidebar-logo{position:relative;display:block;zoom:50%;}#sidebar-logo span,#sidebar-logo span:before,#sidebar-logo span:after{content:"";position:absolute;display:block}#sidebar-logo .charr-k{height:40px;border:6px solid #ED1C24;top:5px;bottom:0;left:39px}#sidebar-logo .charr-d{border:11px solid #ED1C24;border-radius:0 10px 10px 0;top:5px;bottom:0;left:0;height:30px;width:14px}#sidebar-logo .charr-e{border:11px solid #000;border-color:#ED1C24;border-left:none;border-right:none;top:5px;right:30px;bottom:0;left:50px;height:30px;width:18px}#sidebar-logo .charr-e:before{border-top:11px solid #000;border-color:#ED1C24;top:9px;right:30px;bottom:0;left:0;height:30px;width:12px}#sidebar-logo .charr-c{height:40px;border:6px solid #46A3FA;top:5px;bottom:0;left:71px}#sidebar-logo .charr-c:before{border:11px solid #46A3FA;border-right:none;border-bottom:none;top:3px;bottom:0;left:2px;height:25px;width:25px;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}#sidebar-logo .charr-d2{border:11px solid #46A3FA;border-radius:0 10px 10px 0;top:5px;bottom:0;left:159px;height:30px;width:14px}#sidebar-logo .charr-e2{border:11px solid #46A3FA;border-right:none;top:5px;right:30px;bottom:0;left:198px;height:30px;width:18px}#sidebar-logo .charr-e2:before{border-top:11px solid #46A3FA;top:9px;right:30px;bottom:0;left:0;height:30px;width:14px}#sidebar-logo .charr-symb{position:absolute;top:5px;left:106px;width:35px;height:35px;border:8px solid #46A3FA;-webkit-animation-name:pulse;animation-name:pulse;-webkit-animation-duration:.6s;animation-duration:.6s;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}#sidebar-logo .charr-symb:before{content:"";position:absolute;display:block;width:23px;height:23px;border:2px solid transparent;-webkit-border-radius:42px;-moz-border-radius:42px;border-radius:42px;left:5px;bottom:4px;border-bottom-color:#fff}#sidebar-logo .charr-symb:after{position:absolute;display:block;content:"";width:10px;height:10px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;top:11px;left:5px;background-color:#fff}#sidebar-logo .charr-symb span{content:"";position:absolute;display:block;right:4px;width:10px;height:10px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;background-color:#fff;top:11px;left:22px}#sidebar-logo .charr-symb .mataa2{right:7px;width:4px;height:4px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;background-color:#222;top:14px;left:25px}#sidebar-logo .charr-symb .mataa1{width:4px;height:4px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;z-index:1;background-color:#222;top:14px;left:8px}@keyframes pulse{50%{-webkit-transform:scale(0.8);-ms-transform:scale(0.8);transform:scale(0.8)}}
+
+/* -----------------------------HTML HEADERNYA----------------------------- */
+<div class='page-container'>
+  <div class='sidebar-menuside'>
+    <header class='logoo' id='logoo'><a href='http://desainkode.blogspot.co.id/' id='sidebar-logo'><span class='charr-k'/><span class='charr-d'/><span class='charr-e'/><span class='charr-c'/><span class='charr-d2'/><span class='charr-e2'/><span class='charr-symb'><span/><span class='mataa1'/><span class='mataa2'/></span></a>
+      <!--<img id="logoo" src="" alt="Logo"/>--> 
+       </header>
+    <div class='menuside'>
+      <ul id='menuside'>
+        <li><a href='http://desainkode.blogspot.com/'><i class='fa fa-home'/><span>Home</span></a></li>
+        <li><a href='#'><i class='fa fa-share-alt'/><span>Share</span><span class='fa fa-angle-right angleright'/></a>
+          <ul>
+            <li><a href='#' onclick='window.open(&apos;https://plus.google.com/share?url=&apos; + encodeURIComponent(document.URL)); return false;' rel='nofollow' target='_blank' title='Share on Google+'><i class='fa fa-google-plus'/> Google Plus</a></li>
+			<li><a href='#' onclick='window.open(&apos;https://www.facebook.com/sharer/sharer.php?u=&apos; + encodeURIComponent(document.URL)); return false;' target='_blank' title='Share on Facebook'><i class='fa fa-facebook'/> Facebook</a></li>
+            <li><a href='#' onclick='window.open(&apos;https://twitter.com/intent/tweet?text=&apos; + encodeURIComponent(document.title) + &apos;:%20&apos;  + encodeURIComponent(document.URL)); return false;' rel='nofollow' target='_blank' title='Tweet'><i class='fa fa-twitter'/> Twitter</a></li>
+            <li><a href='#' onclick='window.open(&apos;http://www.tumblr.com/share?v=3=&apos; + encodeURIComponent(document.URL) + &apos;=&apos; +  encodeURIComponent(document.title)); return false;' rel='nofollow' target='_blank' title='Post to Tumblr'><i class='fa fa-tumblr'/> Tumblr</a></li>
+			<li><a href='#' onclick='window.open(&apos;http://www.reddit.com/submit?url=&apos; + encodeURIComponent(document.URL) + &apos;=&apos; +  encodeURIComponent(document.title)); return false;' rel='nofollow' target='_blank' title='Submit to Reddit'><i class='fa fa-reddit'/> Reddit</a></li>
+			<li><a href='#' onclick='window.open(&apos;http://pinterest.com/pin/create/button/?url=&apos; + encodeURIComponent(document.URL) + &apos;=&apos; +  encodeURIComponent(document.title)); return false;' rel='nofollow' target='_blank' title='Pin it'><i class='fa fa-pinterest'/> Pinterest</a></li>
+			<li><a href='#' onclick='window.open(&apos;http://www.linkedin.com/shareArticle?mini=true=&apos; + encodeURIComponent(document.URL) + &apos;=&apos; +  encodeURIComponent(document.title)); return false;' rel='nofollow' target='_blank' title='Share on LinkedIn'><i class='fa fa-linkedin'/> Linkedin</a></li>
+			<li><a href='#' onclick='window.open(&apos;https://getpocket.com/save?url=&apos; + encodeURIComponent(document.URL) + &apos;=&apos; +  encodeURIComponent(document.title)); return false;' rel='nofollow' target='_blank' title='Add to Pocket'><i class='fa fa-get-pocket'/> Getpocket</a></li>
+			<li><a href='#' onclick='window.open(&apos;http://wordpress.com/press-this.php?u=&apos; + encodeURIComponent(document.URL) + &apos;=&apos; +  encodeURIComponent(document.title)); return false;' rel='nofollow' target='_blank' title='Publish on WordPress'><i class='fa fa-wordpress'/> Wordpress</a></li>
+          </ul>
+        </li>
+        <li><a href='#'><i class='fa fa-anchor'/><span>Tools</span><span class='fa fa-angle-double-right angleright'/></a>
+          <ul>
+            <li><a href='#'>Blog Tools<i class='fa fa-angle-right angleright2'/></a>
+              <ul>
+                <li><a href='#'>Tools</a></li>
+              </ul>
+            </li>
+            <li><a href='#'>Live Tools</a></li>
+          </ul>
+        </li>
+        <li><a href='#'><i class='fa fa-envelope'/><span>About</span><span class='fa fa-angle-right angleright'/></a>
+          <ul>
+            <li><a href='http://desainkode.blogspot.co.id/p/kirim-pesan.html'>Contact us</a></li>
+            <li><a href='http://desainkode.blogspot.com/p/tentang-desain-kode.html'>About us</a></li>
+          </ul>
+        </li>
+        
+        <li><a href='#'><i class='fa fa-sitemap'/><span>Sitemap</span></a></li>
+        <li><a href='https://www.blogger.com/follow-blog.g?blogID=5618312607933054011'><i class='fa fa-users'/><span>Join this blog</span></a></li>
+        <li><a href='http://editkode-live.blogspot.co.id' rel='nofollow'><i class='fa fa-jsfiddle'/><span>EditorKode-Live</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+/* -----------------------------JAVASCRIPTNYA----------------------------- */
+<script src='http://code.jquery.com/jquery-2.1.1.min.js'/> 
+<script>
+var toggle = true;
+            
+$(&quot;.sidebar-icon&quot;).click(function() {                
+  if (toggle)
+  {
+    $(&quot;.page-container&quot;).addClass(&quot;sidebar-collapsed-back&quot;).removeClass(&quot;sidebar-collapsed&quot;);
+    $(&quot;#menuside span&quot;).css({&quot;position&quot;:&quot;absolute&quot;});
+  }
+  else
+  {
+    $(&quot;.page-container&quot;).removeClass(&quot;sidebar-collapsed-back&quot;).addClass(&quot;sidebar-collapsed&quot;);
+    setTimeout(function() {
+      $(&quot;#menuside span&quot;).css({&quot;position&quot;:&quot;relative&quot;});
+    }, 400);
+  }
+                
+                toggle = !toggle;
+            });
+</script>
+
+/* -----------------------------TOMBOLNYA----------------------------- */
+
+<span class='field-tip'><a class='sidebar-icon' href='#'> <span class='fa fa-bars'/> </a><span class='tip-content'>Click to OPEN or CLOSE Sidebar Menu</span>
+</span>  
